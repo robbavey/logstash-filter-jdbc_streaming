@@ -3,9 +3,9 @@ sudo: false
 language: ruby
 cache: bundler
 services:
-- mysql
+- mariadb '10.0'
 before_install:
-- mysql -e 'CREATE DATABASE jdbc_streaming_db;'
+- mariadb -e 'CREATE DATABASE jdbc_streaming_db;'
 matrix:
   include:
   - rvm: jruby-9.1.13.0
